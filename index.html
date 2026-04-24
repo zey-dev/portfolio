@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    section {
+      padding: 120px 10%;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 80px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      color: #aaa;
+    }
+
+    .bg-video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    .pfp {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 25px rgba(255,255,255,0.2);
+    }
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #aaa;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      padding: 10px 20px;
+      border: 1px solid #333;
+      border-radius: 30px;
+      color: #ccc;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      padding: 20px;
+      border: 1px solid #222;
+      border-radius: 20px;
+      background: #111;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .project p {
+      color: #aaa;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 30px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      background: #111;
+      color: #fff;
+    }
+
+    .contact-form button {
+      padding: 12px;
+      border-radius: 30px;
+      border: none;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #ccc;
+    }
+
+    /* ANIMATION */
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s;
+    }
+
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="THIS IS 4K ANIME (Tanjiro Kamado).mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <img src="https://i.pinimg.com/736x/17/cb/93/17cb93e68c7f6075080946eaf0619304.jpg" class="pfp">
+
+    <h1>ZEY</h1>
+    <p>Développeur web passionné</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about fade">
+    <h2>À propos</h2>
+    <p>Passionné par le web, je crée des sites modernes avec une attention particulière au design et à l’expérience utilisateur.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="fade">
+    <h2>Compétences</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">UI/UX</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="fade">
+    <h2>Projets</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Site vitrine moderne</h3>
+        <p>Création d’un site responsive avec design épuré.</p>
+      </div>
+      <div class="project">
+        <h3>Application interactive</h3>
+        <p>Interface dynamique développée en JavaScript.</p>
+      </div>
+      <div class="project">
+        <h3>Portfolio créatif</h3>
+        <p>Portfolio avec animations fluides et modernes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact fade">
+    <h2>Contact</h2>
+
+    <form action="https://formspree.io/f/mqaydvbv" method="POST" class="contact-form">
+      
+      <input type="text" name="name" placeholder="Nom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    faders.forEach(el => observer.observe(el));
+
+    // Form message
+    const form = document.querySelector(".contact-form");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.innerHTML = "<p style='color:#0f0;'>Message envoyé ✔️</p>";
+      } else {
+        form.innerHTML = "<p style='color:red;'>Erreur ❌</p>";
+      }
+    });
+  </script>
+
+</body>
+</html>
