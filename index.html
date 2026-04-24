@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zey | Développeur Web</title>
+  <meta name="description" content="Portfolio de Zey - développeur web moderne">
 
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
       font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,45 +27,56 @@
     }
 
     section {
-      padding: 120px 10%;
+      padding: 100px 10%;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      color: #aaa;
     }
 
     /* HERO */
     .hero {
-      position: relative;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      overflow: hidden;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
     }
 
     .hero h1 {
-      font-size: 80px;
-      font-weight: 800;
+      font-size: 70px;
     }
 
     .hero p {
-      margin-top: 20px;
       color: #aaa;
-    }
-
-    .bg-video {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: -1;
+      margin-top: 10px;
     }
 
     .pfp {
@@ -69,20 +85,19 @@
       border-radius: 50%;
       margin-bottom: 20px;
       border: 2px solid #fff;
-      box-shadow: 0 0 25px rgba(255,255,255,0.2);
     }
 
     h2 {
-      font-size: 40px;
+      font-size: 35px;
       margin-bottom: 20px;
     }
 
     .about p {
       color: #aaa;
       max-width: 600px;
-      line-height: 1.6;
     }
 
+    /* SKILLS */
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -96,6 +111,11 @@
       color: #ccc;
     }
 
+    .skill i {
+      margin-right: 8px;
+    }
+
+    /* PROJECTS */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -104,35 +124,33 @@
 
     .project {
       padding: 20px;
-      border: 1px solid #222;
       border-radius: 20px;
       background: #111;
       transition: 0.3s;
     }
 
     .project:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .project p {
-      color: #aaa;
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 14px;
     }
 
     /* CONTACT */
-    .contact {
-      text-align: center;
-    }
-
     .contact-form {
       max-width: 500px;
-      margin: 30px auto;
+      margin: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    .contact-form input,
-    .contact-form textarea {
+    input, textarea {
       padding: 12px;
       border-radius: 10px;
       border: 1px solid #333;
@@ -140,17 +158,16 @@
       color: #fff;
     }
 
-    .contact-form button {
+    button {
       padding: 12px;
       border-radius: 30px;
       border: none;
       background: #fff;
       color: #000;
-      font-weight: 600;
       cursor: pointer;
     }
 
-    .contact-form button:hover {
+    button:hover {
       background: #ccc;
     }
 
@@ -166,112 +183,101 @@
       transform: translateY(0);
     }
 
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 40px;
+      }
+      section {
+        padding: 80px 5%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-      <source src="THIS IS 4K ANIME (Tanjiro Kamado).mp4" type="video/mp4">
-    </video>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div>ZEY</div>
+  <ul>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="overlay"></div>
+<!-- HERO -->
+<section class="hero">
+  <img src="https://i.pinimg.com/736x/17/cb/93/17cb93e68c7f6075080946eaf0619304.jpg" class="pfp" alt="Photo de profil">
+  <h1>ZEY</h1>
+  <p>Développeur web passionné</p>
+</section>
 
-    <img src="https://i.pinimg.com/736x/17/cb/93/17cb93e68c7f6075080946eaf0619304.jpg" class="pfp">
+<!-- ABOUT -->
+<section id="about" class="about fade">
+  <h2>À propos</h2>
+  <p>Je crée des sites modernes, rapides et élégants avec une attention particulière à l’expérience utilisateur.</p>
+</section>
 
-    <h1>ZEY</h1>
-    <p>Développeur web passionné</p>
-  </section>
+<!-- SKILLS -->
+<section id="skills" class="fade">
+  <h2>Compétences</h2>
+  <div class="skills">
+    <div class="skill"><i class="fab fa-html5"></i>HTML</div>
+    <div class="skill"><i class="fab fa-css3-alt"></i>CSS</div>
+    <div class="skill"><i class="fab fa-js"></i>JavaScript</div>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="about fade">
-    <h2>À propos</h2>
-    <p>Passionné par le web, je crée des sites modernes avec une attention particulière au design et à l’expérience utilisateur.</p>
-  </section>
+<!-- PROJECTS -->
+<section id="projects" class="fade">
+  <h2>Projets</h2>
+  <div class="projects">
 
-  <!-- SKILLS -->
-  <section class="fade">
-    <h2>Compétences</h2>
-    <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">UI/UX</div>
+    <div class="project">
+      <h3>Portfolio</h3>
+      <p>Site personnel moderne avec animations.</p>
+      <a href="#">GitHub</a><br>
+      <a href="#">Voir</a>
     </div>
-  </section>
 
-  <!-- PROJECTS -->
-  <section class="fade">
-    <h2>Projets</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Site vitrine moderne</h3>
-        <p>Création d’un site responsive avec design épuré.</p>
-      </div>
-      <div class="project">
-        <h3>Application interactive</h3>
-        <p>Interface dynamique développée en JavaScript.</p>
-      </div>
-      <div class="project">
-        <h3>Portfolio créatif</h3>
-        <p>Portfolio avec animations fluides et modernes.</p>
-      </div>
+    <div class="project">
+      <h3>To-Do App</h3>
+      <p>Application interactive en JavaScript.</p>
+      <a href="#">GitHub</a><br>
+      <a href="#">Voir</a>
     </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="contact fade">
-    <h2>Contact</h2>
+  </div>
+</section>
 
-    <form action="https://formspree.io/f/mqaydvbv" method="POST" class="contact-form">
-      
-      <input type="text" name="name" placeholder="Nom" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2>Contact</h2>
 
-      <input type="hidden" name="_captcha" value="false">
+  <form action="https://formspree.io/f/mqaydvbv" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Nom" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
 
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+</section>
 
-  <!-- SCRIPT -->
-  <script>
-    const faders = document.querySelectorAll('.fade');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    faders.forEach(el => observer.observe(el));
-
-    // Form message
-    const form = document.querySelector(".contact-form");
-
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-
-      const data = new FormData(form);
-
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        form.innerHTML = "<p style='color:#0f0;'>Message envoyé ✔️</p>";
-      } else {
-        form.innerHTML = "<p style='color:red;'>Erreur ❌</p>";
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
-  </script>
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
