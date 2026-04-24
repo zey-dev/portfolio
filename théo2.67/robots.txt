@@ -1,7 +1,0 @@
-# Autoriser tous les robots de recherche
-
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://theo.nxtaigen.com/sitemap.xml
