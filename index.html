@@ -6,7 +6,7 @@
   <title>Zey | Développeur Web</title>
   <meta name="description" content="Portfolio de Zey — développeur web moderne">
 
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +18,7 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-  <div class="navbar-logo">ZEY</div>
+  <div class="navbar-logo">ZEY_</div>
   <ul>
     <li><a href="#about">À propos</a></li>
     <li><a href="#skills">Compétences</a></li>
@@ -30,59 +30,64 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
+  <div class="hero-scan"></div>
   <div class="hero-glow"></div>
 
-  <p class="hero-tag">Disponible pour des projets</p>
+  <p class="hero-tag">Système en ligne · Disponible pour missions</p>
 
   <div class="hero-content">
-    <img
-      src="https://i.pinimg.com/736x/17/cb/93/17cb93e68c7f6075080946eaf0619304.jpg"
-      class="pfp"
-      alt="Photo de profil de Zey"
-    >
+    <div class="pfp-wrapper">
+      <img
+        src="https://i.pinimg.com/736x/17/cb/93/17cb93e68c7f6075080946eaf0619304.jpg"
+        class="pfp"
+        alt="Photo de profil de Zey"
+      >
+    </div>
     <div class="hero-text">
-      <h1>ZE<span>Y</span></h1>
-      <p class="hero-sub">// Développeur web &amp; créateur d'interfaces modernes</p>
+      <h1 data-text="ZEY">ZE<span class="neon">Y</span></h1>
+      <p class="hero-sub">// <span class="accent">Développeur web</span> & créateur d'interfaces du futur</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn-ghost">Me contacter</a>
+        <a href="#projects" class="btn-primary">Voir les projets</a>
+        <a href="#contact" class="btn-ghost">Initier contact</a>
       </div>
     </div>
   </div>
 
-  <div class="scroll-hint">Scroll</div>
+  <div class="scroll-hint">Scroll pour continuer</div>
 </section>
+
+<div class="cyber-divider"></div>
 
 <!-- ABOUT -->
 <section id="about" class="fade">
-  <p class="section-label">01 — À propos</p>
-  <h2>Qui suis-je ?</h2>
+  <p class="section-label">// 01 — Profil</p>
+  <h2>Qui <span>suis-je</span> ?</h2>
 
   <div class="about-grid">
     <div class="about-text">
       <p>
-        Je suis Zey, développeur web passionné par la création d'interfaces modernes, rapides et mémorables.
-        Chaque projet est pour moi une occasion de repousser les limites du design et de la performance.
+        Je suis <span class="accent">Zey</span>, développeur web passionné par la création d'interfaces modernes,
+        rapides et mémorables. Chaque projet est une mission : repousser les limites du design et de la performance.
       </p>
       <p>
-        J'accorde une attention particulière à l'expérience utilisateur : fluidité des animations,
-        accessibilité et code propre. Mon objectif est de produire des sites qui impressionnent au premier regard
-        et restent agréables à utiliser au quotidien.
+        Mon obsession : l'expérience utilisateur. Fluidité des animations, accessibilité et code propre.
+        Je construis des interfaces qui <span class="accent">impressionnent au premier regard</span>
+        et restent agréables à l'usage quotidien.
       </p>
     </div>
 
     <div class="about-stats">
       <div class="stat-card">
-        <div class="stat-number">1</div>
-        <div class="stat-label">Ans d'expérience</div>
+        <div class="stat-number">3+</div>
+        <div class="stat-label">Ans d'xp</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">1</div>
-        <div class="stat-label">Projets réalisés</div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Projets</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">80%</div>
-        <div class="stat-label">formateur satisfaits</div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Satisfaction</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">∞</div>
@@ -92,29 +97,42 @@
   </div>
 </section>
 
+<div class="cyber-divider"></div>
+
 <!-- SKILLS -->
 <section id="skills" class="fade">
-  <p class="section-label">02 — Compétences</p>
-  <h2>Stack technique</h2>
+  <p class="section-label">// 02 — Stack</p>
+  <h2>Compétences <span>techniques</span></h2>
 
   <div class="skills-grid">
-    <div class="skill"><i class="fab fa-html5"></i> HTML <span class="skill-level">intermédiaire</span></div>
-    <div class="skill"><i class="fab fa-css3-alt"></i> CSS <span class="skill-level">intermédiaire</span></div>
-    <div class="skill"><i class="fab fa-js"></i> JavaScript <span class="skill-level">débutant</span></div>
-    <div class="skill"><i class="fab fa-git-alt"></i> Git <span class="skill-level">débutant</span></div>
+    <div class="skill"><i class="fab fa-html5"></i> HTML <span class="skill-level">Expert</span></div>
+    <div class="skill"><i class="fab fa-css3-alt"></i> CSS <span class="skill-level">Expert</span></div>
+    <div class="skill"><i class="fab fa-js"></i> JavaScript <span class="skill-level">Avancé</span></div>
+    <div class="skill"><i class="fab fa-react"></i> React <span class="skill-level">Intermédiaire</span></div>
+    <div class="skill"><i class="fab fa-node-js"></i> Node.js <span class="skill-level">Intermédiaire</span></div>
+    <div class="skill"><i class="fab fa-git-alt"></i> Git <span class="skill-level">Avancé</span></div>
+    <div class="skill"><i class="fab fa-figma"></i> Figma <span class="skill-level">Intermédiaire</span></div>
     <div class="skill"><i class="fas fa-database"></i> SQL <span class="skill-level">Intermédiaire</span></div>
   </div>
 </section>
 
+<div class="cyber-divider"></div>
+
 <!-- PROJECTS -->
 <section id="projects" class="fade">
-  <p class="section-label">03 — Projets</p>
-  <h2>Mes réalisations</h2>
+  <p class="section-label">// 03 — Missions</p>
+  <h2>Mes <span>réalisations</span></h2>
 
   <div class="projects-grid">
 
     <div class="project">
-      <div class="project-header"></div>
+      <div class="project-header">
+        <span>🌐</span>
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">HTML</span>
@@ -125,39 +143,53 @@
         <p>Site personnel moderne avec animations avancées et design épuré.</p>
         <div class="project-links">
           <a href="#"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Voir</a>
+          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <div class="project-header"></div>
+      <div class="project-header">
+        <span>🛒</span>
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Node.js</span>
+          <span class="tag">SQL</span>
         </div>
         <h3>ShopZey</h3>
-        <p>Application e-commerce full-stack avec panier, paiement et tableau de bord admin.</p>
+        <p>Application e-commerce full-stack avec panier, paiement et dashboard admin.</p>
         <div class="project-links">
           <a href="#"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Voir</a>
+          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
         </div>
       </div>
     </div>
 
     <div class="project">
-      <div class="project-header"></div>
+      <div class="project-header">
+        <span>🎨</span>
+        <div class="corner corner-tl"></div>
+        <div class="corner corner-tr"></div>
+        <div class="corner corner-bl"></div>
+        <div class="corner corner-br"></div>
+      </div>
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">CSS</span>
           <span class="tag">Animation</span>
+          <span class="tag">Open Source</span>
         </div>
         <h3>PixelLab</h3>
         <p>Librairie de composants animés open-source, prêts à copier-coller.</p>
         <div class="project-links">
           <a href="#"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Voir</a>
+          <a href="#"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
         </div>
       </div>
     </div>
@@ -165,26 +197,28 @@
   </div>
 </section>
 
+<div class="cyber-divider"></div>
+
 <!-- CONTACT -->
 <section id="contact" class="fade">
-  <p class="section-label">04 — Contact</p>
-  <h2>Travaillons ensemble</h2>
+  <p class="section-label">// 04 — Transmission</p>
+  <h2>Initier un <span>contact</span></h2>
 
   <div class="contact-wrapper">
     <div class="contact-info">
       <p>
-        Une idée de projet ? Une collaboration ? N'hésitez pas à me contacter,
-        je réponds en général sous 24h.
+        Une idée de projet ? Une collaboration ? Envoyez une transmission —
+        je réponds sous 24h.
       </p>
       <div class="contact-socials">
-        <a href="https://github.com/zey-dev" class="social-link">
-          <i class="fab fa-github"></i> github.com/zey-dev
+        <a href="#" class="social-link">
+          <i class="fab fa-github"></i> github.com/zey
         </a>
-        <a href="https://discord.gg/zeyro1." class="social-link">
-          <i class="fab fa-discord"></i> discord.gg/zeyro1.
+        <a href="#" class="social-link">
+          <i class="fab fa-discord"></i> discord.gg/zey
         </a>
-        <a href="mailto:doryan.mahy009@gmail.com" class="social-link">
-          <i class="fas fa-envelope"></i> doryan.mahy009@gmail.com
+        <a href="mailto:zey@email.com" class="social-link">
+          <i class="fas fa-envelope"></i> zey@email.com
         </a>
       </div>
     </div>
@@ -194,17 +228,17 @@
         <input type="text" name="name" placeholder="Nom" required>
         <input type="email" name="email" placeholder="Email" required>
       </div>
-      <input type="text" name="subject" placeholder="Sujet">
-      <textarea name="message" rows="5" placeholder="Message" required></textarea>
-      <button type="submit">Envoyer le message →</button>
+      <input type="text" name="subject" placeholder="Sujet de la mission">
+      <textarea name="message" rows="5" placeholder="Détails de la transmission..." required></textarea>
+      <button type="submit">Envoyer la transmission →</button>
     </form>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">ZEY</div>
-  <p class="footer-copy">© 2025 — Zey. Tous droits réservés.</p>
+  <div class="footer-logo">ZEY_</div>
+  <p class="footer-copy">© 2025 — Tous droits réservés · Système v1.0</p>
 </footer>
 
 <!-- JS -->
@@ -212,13 +246,26 @@
   // Cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
+
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top  = e.clientY + 'px';
     setTimeout(() => {
       ring.style.left = e.clientX + 'px';
       ring.style.top  = e.clientY + 'px';
-    }, 60);
+    }, 70);
+  });
+
+  // Shrink cursor on hover
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'translate(-50%, -50%) scale(2)';
+      ring.style.opacity = '0.8';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+      ring.style.opacity = '0.45';
+    });
   });
 
   // Scroll reveal
@@ -229,7 +276,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
 
   document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 </script>
